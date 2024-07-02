@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Cell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.placement-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.placement-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.placement-form p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.placement-form form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.placement-form form input,
+.placement-form form select,
+.placement-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.placement-form form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.placement-form form button:hover {
+    background: #555;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .placement-form {
+        padding: 10px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Students Gallery</a></li>
+                <li><a href="#">Placement Cell</a></li>
+                <li><a href="#">Enquiry</a></li>
+                <li><a href="#">Recruitment</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Certificate Verification</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="placement-form">
+            <h1>Placement Cell</h1>
+            <p>Students pursuing courses in ADORO MULTIMEDIA still apply for job assistance after submitting their respective demos.</p>
+            <form action="send_email.php" method="post" enctype="multipart/form-data">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="course">Course *</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="fees">Fees *</label>
+                <input type="number" id="fees" name="fees" required>
+
+                <label for="date">Date of joining *</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="duration">Duration *</label>
+                <input type="text" id="duration" name="duration" required>
+
+                <label for="demo">Demo Submitted *</label>
+                <select id="demo" name="demo" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <label for="cv">CV Upload</label>
+                <input type="file" id="cv" name="cv">
+
+                <button type="submit">Apply Now</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
